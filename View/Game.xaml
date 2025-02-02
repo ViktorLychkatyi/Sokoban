@@ -3,11 +3,76 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Sokoban.View"
-      mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="800"
-      Title="Game">
-    <Grid Background="White">
-        <Button Content="Main" HorizontalAlignment="Left" Margin="227,379,0,0" VerticalAlignment="Top" Height="86" Width="362" Click="Main" FontSize="36" FontWeight="Bold" FontFamily="Onest Black"/>
+      xmlns:local="clr-namespace:Sokoban.Models"
+      mc:Ignorable="d"
+      d:DesignHeight="768" d:DesignWidth="1280"
+      Title="Game"
+      KeyDown="Page_KeyDown"
+      Focusable="True"
+      Loaded="Page_Loaded">
+    <Grid Background="#F1ED72">
+        <ItemsControl 
+            ItemsSource="{Binding AllCells}"
+            Grid.Row="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <ItemsControl ItemsSource="{Binding}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel IsItemsHost="True"
+                                            Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border Width="50" Height="50" Margin="0" BorderBrush="#B115B4" BorderThickness="1">
+                                    <Grid>
+                                        <Grid.Style>
+                                            <Style TargetType="Grid">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Cell}" Value="Wall">
+                                                        <Setter Property="Background" Value="#FFA7C0"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding Cell}" Value="Player">
+                                                        <Setter Property="Background" Value="#F47274"/>
+                                                        <Setter Property="Clip">
+                                                            <Setter.Value>
+                                                                <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding Cell}" Value="Box">
+                                                        <Setter Property="Background" Value="#AD92EC"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding Cell}" Value="Goal">
+                                                        <Setter Property="Background" Value="#76F0A8"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding Cell}" Value="PlayerOnGoal">
+                                                        <Setter Property="Background" Value="#F47274"/>
+                                                        <Setter Property="Clip">
+                                                            <Setter.Value>
+                                                                <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding Cell}" Value="BoxOnGoal">
+                                                        <Setter Property="Background" Value="#AD92EC"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding Cell}" Value="None">
+                                                        <Setter Property="Background" Value="Transparent"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Grid.Style>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </Page>

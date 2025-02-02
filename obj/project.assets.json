@@ -1,11 +1,378 @@
 {
   "version": 3,
   "targets": {
-    "net9.0-windows7.0": {}
+    "net9.0-windows7.0": {
+      "MaterialDesignColors/5.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignThemes/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "5.2.1",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.39"
+        },
+        "compile": {
+          "lib/net8.0/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.122": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "Prism.Container.Abstractions/9.0.106": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
+        },
+        "compile": {
+          "lib/net8.0/Prism.Container.Abstractions.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Prism.Container.Abstractions.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/Prism.Container.Abstractions.targets": {}
+        }
+      },
+      "Prism.Core/9.0.537": {
+        "type": "package",
+        "dependencies": {
+          "Prism.Container.Abstractions": "9.0.106",
+          "Prism.Events": "9.0.537"
+        },
+        "compile": {
+          "lib/net6.0/Prism.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Prism.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Prism.Core.targets": {}
+        }
+      },
+      "Prism.Events/9.0.537": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Prism.Events.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Prism.Events.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Prism.Events.targets": {}
+        }
+      },
+      "Prism.Wpf/9.0.537": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.122",
+          "Prism.Core": "9.0.537"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Prism.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Prism.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MaterialDesignColors/5.2.1": {
+      "sha512": "D0HW6E2/kzsnEWCh1KDG/K09Fpkvs9mR3n91Y8YSOsEAoQmGZbVAj58ssyAxGTiIPj2zB4ZVnwxkizwO35/v8A==",
+      "type": "package",
+      "path": "materialdesigncolors/5.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docs/README.md",
+        "images/MaterialDesignColors.Icon.png",
+        "lib/net462/MaterialDesignColors.dll",
+        "lib/net462/MaterialDesignColors.pdb",
+        "lib/net6.0/MaterialDesignColors.dll",
+        "lib/net6.0/MaterialDesignColors.pdb",
+        "lib/net8.0/MaterialDesignColors.dll",
+        "lib/net8.0/MaterialDesignColors.pdb",
+        "materialdesigncolors.5.2.1.nupkg.sha512",
+        "materialdesigncolors.nuspec"
+      ]
+    },
+    "MaterialDesignThemes/5.2.1": {
+      "sha512": "x8JDqNHJcTLLxIoVts3w7AbSq5Zo0FXTw89XqPN7+n0EKqLXFwWsywiUn08HDyTGAmZVJqbQsWKxKWCI8qfWsQ==",
+      "type": "package",
+      "path": "materialdesignthemes/5.2.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MaterialDesignThemes.targets",
+        "build/Resources/Roboto/Roboto-Black.ttf",
+        "build/Resources/Roboto/Roboto-BlackItalic.ttf",
+        "build/Resources/Roboto/Roboto-Bold.ttf",
+        "build/Resources/Roboto/Roboto-BoldItalic.ttf",
+        "build/Resources/Roboto/Roboto-Italic.ttf",
+        "build/Resources/Roboto/Roboto-Light.ttf",
+        "build/Resources/Roboto/Roboto-LightItalic.ttf",
+        "build/Resources/Roboto/Roboto-Medium.ttf",
+        "build/Resources/Roboto/Roboto-MediumItalic.ttf",
+        "build/Resources/Roboto/Roboto-Regular.ttf",
+        "build/Resources/Roboto/Roboto-Thin.ttf",
+        "build/Resources/Roboto/Roboto-ThinItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Bold.ttf",
+        "build/Resources/Roboto/RobotoCondensed-BoldItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Italic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Light.ttf",
+        "build/Resources/Roboto/RobotoCondensed-LightItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Regular.ttf",
+        "docs/README.md",
+        "images/MaterialDesignThemes.Icon.png",
+        "lib/net462/MaterialDesignThemes.Wpf.dll",
+        "lib/net462/MaterialDesignThemes.Wpf.pdb",
+        "lib/net462/MaterialDesignThemes.Wpf.xml",
+        "lib/net6.0/MaterialDesignThemes.Wpf.dll",
+        "lib/net6.0/MaterialDesignThemes.Wpf.pdb",
+        "lib/net6.0/MaterialDesignThemes.Wpf.xml",
+        "lib/net8.0/MaterialDesignThemes.Wpf.dll",
+        "lib/net8.0/MaterialDesignThemes.Wpf.pdb",
+        "lib/net8.0/MaterialDesignThemes.Wpf.xml",
+        "materialdesignthemes.5.2.1.nupkg.sha512",
+        "materialdesignthemes.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
+      "sha512": "fGLiCRLMYd00JYpClraLjJTNKLmMJPnqxMaiRzEBIIvevlzxz33mXy39Lkd48hu1G+N21S7QpaO5ZzKsI6FRuA==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.122": {
+      "sha512": "SgcafT189u4qX++vSCV9FLQ4BsRXU9J2esnHA9IF8GOSgnPBulFw1CW4X/FYoOXvZwdDZxlSObJUGUg1U1wSyg==",
+      "type": "package",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.122",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Design/Microsoft.Xaml.Behaviors.Design.dll",
+        "lib/net462/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/net462/Microsoft.Xaml.Behaviors.dll",
+        "lib/net462/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net462/Microsoft.Xaml.Behaviors.xml",
+        "lib/net6.0-windows7.0/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.dll",
+        "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.xml",
+        "microsoft.xaml.behaviors.wpf.1.1.122.nupkg.sha512",
+        "microsoft.xaml.behaviors.wpf.nuspec",
+        "tools/Install.ps1"
+      ]
+    },
+    "Prism.Container.Abstractions/9.0.106": {
+      "sha512": "QNOERNOqsxvAa8pbWjqFB872DkvYK/cVRrcFO5vJYgWTIKBd8xfaI/jaZ0qeXLYVDz0nrvgJTZVVnip6+68dCw==",
+      "type": "package",
+      "path": "prism.container.abstractions/9.0.106",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ReadMe.md",
+        "buildTransitive/Prism.Container.Abstractions.targets",
+        "lib/net462/Prism.Container.Abstractions.dll",
+        "lib/net462/Prism.Container.Abstractions.pdb",
+        "lib/net47/Prism.Container.Abstractions.dll",
+        "lib/net47/Prism.Container.Abstractions.pdb",
+        "lib/net6.0/Prism.Container.Abstractions.dll",
+        "lib/net6.0/Prism.Container.Abstractions.pdb",
+        "lib/net7.0/Prism.Container.Abstractions.dll",
+        "lib/net7.0/Prism.Container.Abstractions.pdb",
+        "lib/net8.0/Prism.Container.Abstractions.dll",
+        "lib/net8.0/Prism.Container.Abstractions.pdb",
+        "lib/netstandard2.0/Prism.Container.Abstractions.dll",
+        "lib/netstandard2.0/Prism.Container.Abstractions.pdb",
+        "lib/netstandard2.1/Prism.Container.Abstractions.dll",
+        "lib/netstandard2.1/Prism.Container.Abstractions.pdb",
+        "prism-logo.png",
+        "prism.container.abstractions.9.0.106.nupkg.sha512",
+        "prism.container.abstractions.nuspec"
+      ]
+    },
+    "Prism.Core/9.0.537": {
+      "sha512": "D7mEqPKLVNrD0g2WHCpC/MOKwn8h7X1liCWyjqjL7NCuxgwuhVLTG85E/ZPBkISrXdwvOQZ+bSY31bvP79FQlg==",
+      "type": "package",
+      "path": "prism.core/9.0.537",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ReadMe.md",
+        "buildTransitive/Prism.Core.targets",
+        "lib/net462/Prism.dll",
+        "lib/net462/Prism.pdb",
+        "lib/net462/Prism.xml",
+        "lib/net47/Prism.dll",
+        "lib/net47/Prism.pdb",
+        "lib/net47/Prism.xml",
+        "lib/net6.0/Prism.dll",
+        "lib/net6.0/Prism.pdb",
+        "lib/net6.0/Prism.xml",
+        "lib/netstandard2.0/Prism.dll",
+        "lib/netstandard2.0/Prism.pdb",
+        "lib/netstandard2.0/Prism.xml",
+        "prism-logo.png",
+        "prism.core.9.0.537.nupkg.sha512",
+        "prism.core.nuspec"
+      ]
+    },
+    "Prism.Events/9.0.537": {
+      "sha512": "Pzp5MGUuhAyKXZUbHVYNWLGF/eA3sScqDN6VrzbWlKj85R0IS0q+JXe99umynso2xhXAe+1jrQCCkgqmEFCBng==",
+      "type": "package",
+      "path": "prism.events/9.0.537",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ReadMe.md",
+        "buildTransitive/Prism.Events.targets",
+        "lib/net462/Prism.Events.dll",
+        "lib/net462/Prism.Events.pdb",
+        "lib/net462/Prism.Events.xml",
+        "lib/net47/Prism.Events.dll",
+        "lib/net47/Prism.Events.pdb",
+        "lib/net47/Prism.Events.xml",
+        "lib/net6.0/Prism.Events.dll",
+        "lib/net6.0/Prism.Events.pdb",
+        "lib/net6.0/Prism.Events.xml",
+        "lib/netstandard2.0/Prism.Events.dll",
+        "lib/netstandard2.0/Prism.Events.pdb",
+        "lib/netstandard2.0/Prism.Events.xml",
+        "prism-logo.png",
+        "prism.events.9.0.537.nupkg.sha512",
+        "prism.events.nuspec"
+      ]
+    },
+    "Prism.Wpf/9.0.537": {
+      "sha512": "srsXhi7FRUFawsNoRkY67duMEGjZo3ff0FpqpkjeWkkAuLazlH1UmNVrvwnpaLQCBboexH/z6oGrLvpeocxgdw==",
+      "type": "package",
+      "path": "prism.wpf/9.0.537",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ReadMe.md",
+        "lib/net462/Prism.Wpf.dll",
+        "lib/net462/Prism.Wpf.pdb",
+        "lib/net462/Prism.Wpf.xml",
+        "lib/net47/Prism.Wpf.dll",
+        "lib/net47/Prism.Wpf.pdb",
+        "lib/net47/Prism.Wpf.xml",
+        "lib/net6.0-windows7.0/Prism.Wpf.dll",
+        "lib/net6.0-windows7.0/Prism.Wpf.pdb",
+        "lib/net6.0-windows7.0/Prism.Wpf.xml",
+        "prism-logo.png",
+        "prism.wpf.9.0.537.nupkg.sha512",
+        "prism.wpf.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0-windows7.0": []
+    "net9.0-windows7.0": [
+      "MaterialDesignThemes >= 5.2.1",
+      "Prism.Wpf >= 9.0.537"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Viktor\\.nuget\\packages\\": {},
@@ -56,6 +423,16 @@
     "frameworks": {
       "net9.0-windows7.0": {
         "targetAlias": "net9.0-windows",
+        "dependencies": {
+          "MaterialDesignThemes": {
+            "target": "Package",
+            "version": "[5.2.1, )"
+          },
+          "Prism.Wpf": {
+            "target": "Package",
+            "version": "[9.0.537, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

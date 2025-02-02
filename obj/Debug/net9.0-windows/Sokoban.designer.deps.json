@@ -5,7 +5,144 @@
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v9.0": {}
+    ".NETCoreApp,Version=v9.0": {
+      "MaterialDesignColors/5.2.1": {
+        "runtime": {
+          "lib/net8.0/MaterialDesignColors.dll": {
+            "assemblyVersion": "5.2.1.0",
+            "fileVersion": "5.2.1.0"
+          }
+        }
+      },
+      "MaterialDesignThemes/5.2.1": {
+        "dependencies": {
+          "MaterialDesignColors": "5.2.1",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.122"
+        },
+        "runtime": {
+          "lib/net8.0/MaterialDesignThemes.Wpf.dll": {
+            "assemblyVersion": "5.2.1.0",
+            "fileVersion": "5.2.1.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.324.11423"
+          }
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.122": {
+        "runtime": {
+          "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.122.28819"
+          }
+        }
+      },
+      "Prism.Container.Abstractions/9.0.106": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/Prism.Container.Abstractions.dll": {
+            "assemblyVersion": "9.0.106.9543",
+            "fileVersion": "9.0.106.9543"
+          }
+        }
+      },
+      "Prism.Core/9.0.537": {
+        "dependencies": {
+          "Prism.Container.Abstractions": "9.0.106",
+          "Prism.Events": "9.0.537"
+        },
+        "runtime": {
+          "lib/net6.0/Prism.dll": {
+            "assemblyVersion": "9.0.537.60525",
+            "fileVersion": "9.0.537.60525"
+          }
+        }
+      },
+      "Prism.Events/9.0.537": {
+        "runtime": {
+          "lib/net6.0/Prism.Events.dll": {
+            "assemblyVersion": "9.0.537.60525",
+            "fileVersion": "9.0.537.60525"
+          }
+        }
+      },
+      "Prism.Wpf/9.0.537": {
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.122",
+          "Prism.Core": "9.0.537"
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Prism.Wpf.dll": {
+            "assemblyVersion": "9.0.537.60525",
+            "fileVersion": "9.0.537.60525"
+          }
+        }
+      }
+    }
   },
-  "libraries": {}
+  "libraries": {
+    "MaterialDesignColors/5.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-D0HW6E2/kzsnEWCh1KDG/K09Fpkvs9mR3n91Y8YSOsEAoQmGZbVAj58ssyAxGTiIPj2zB4ZVnwxkizwO35/v8A==",
+      "path": "materialdesigncolors/5.2.1",
+      "hashPath": "materialdesigncolors.5.2.1.nupkg.sha512"
+    },
+    "MaterialDesignThemes/5.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-x8JDqNHJcTLLxIoVts3w7AbSq5Zo0FXTw89XqPN7+n0EKqLXFwWsywiUn08HDyTGAmZVJqbQsWKxKWCI8qfWsQ==",
+      "path": "materialdesignthemes/5.2.1",
+      "hashPath": "materialdesignthemes.5.2.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fGLiCRLMYd00JYpClraLjJTNKLmMJPnqxMaiRzEBIIvevlzxz33mXy39Lkd48hu1G+N21S7QpaO5ZzKsI6FRuA==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.1",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+    },
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.122": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SgcafT189u4qX++vSCV9FLQ4BsRXU9J2esnHA9IF8GOSgnPBulFw1CW4X/FYoOXvZwdDZxlSObJUGUg1U1wSyg==",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.122",
+      "hashPath": "microsoft.xaml.behaviors.wpf.1.1.122.nupkg.sha512"
+    },
+    "Prism.Container.Abstractions/9.0.106": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QNOERNOqsxvAa8pbWjqFB872DkvYK/cVRrcFO5vJYgWTIKBd8xfaI/jaZ0qeXLYVDz0nrvgJTZVVnip6+68dCw==",
+      "path": "prism.container.abstractions/9.0.106",
+      "hashPath": "prism.container.abstractions.9.0.106.nupkg.sha512"
+    },
+    "Prism.Core/9.0.537": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-D7mEqPKLVNrD0g2WHCpC/MOKwn8h7X1liCWyjqjL7NCuxgwuhVLTG85E/ZPBkISrXdwvOQZ+bSY31bvP79FQlg==",
+      "path": "prism.core/9.0.537",
+      "hashPath": "prism.core.9.0.537.nupkg.sha512"
+    },
+    "Prism.Events/9.0.537": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Pzp5MGUuhAyKXZUbHVYNWLGF/eA3sScqDN6VrzbWlKj85R0IS0q+JXe99umynso2xhXAe+1jrQCCkgqmEFCBng==",
+      "path": "prism.events/9.0.537",
+      "hashPath": "prism.events.9.0.537.nupkg.sha512"
+    },
+    "Prism.Wpf/9.0.537": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-srsXhi7FRUFawsNoRkY67duMEGjZo3ff0FpqpkjeWkkAuLazlH1UmNVrvwnpaLQCBboexH/z6oGrLvpeocxgdw==",
+      "path": "prism.wpf/9.0.537",
+      "hashPath": "prism.wpf.9.0.537.nupkg.sha512"
+    }
+  }
 }

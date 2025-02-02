@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sokoban.Models;
+using Sokoban.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,11 +25,46 @@ namespace Sokoban.View
         public Game()
         {
             InitializeComponent();
+            DataContext = new MainVM();
         }
 
-        private void Main(object sender, RoutedEventArgs e)
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Menu());
+            this.Focus();
+        }
+
+        private void Page_KeyDown(object sender, KeyEventArgs e)
+        {
+            var viewModel = DataContext as MainVM;
+            if (viewModel == null) return;
+
+            switch (e.Key)
+            {
+                case Key.Up:
+                    viewModel.MoveCommand.Execute(Player.Up);
+                    break;
+                case Key.Down:
+                    viewModel.MoveCommand.Execute(Player.Down);
+                    break;
+                case Key.Left:
+                    viewModel.MoveCommand.Execute(Player.Left);
+                    break;
+                case Key.Right:
+                    viewModel.MoveCommand.Execute(Player.Right);
+                    break;
+                case Key.W:
+                    viewModel.MoveCommand.Execute(Player.W);
+                    break;
+                case Key.S:
+                    viewModel.MoveCommand.Execute(Player.S);
+                    break;
+                case Key.A:
+                    viewModel.MoveCommand.Execute(Player.A);
+                    break;
+                case Key.D:
+                    viewModel.MoveCommand.Execute(Player.D);
+                    break;
+            }
         }
     }
 }

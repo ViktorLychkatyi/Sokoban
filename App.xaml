@@ -1,9 +1,17 @@
 ﻿<Application x:Class="Sokoban.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Sokoban"
              StartupUri="View/MainWindow.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="OnestBlack">pack://application:,,,/Fonts/#Onest Black</FontFamily>
+        <FontFamily x:Key="OnestBold">pack://application:,,,/Fonts/#Onest Bold</FontFamily>
+        <FontFamily x:Key="OnestExtraBold">pack://application:,,,/Fonts/#Onest ExtraBold</FontFamily>
+        <FontFamily x:Key="OnestExtraLight">pack://application:,,,/Fonts/#Onest ExtraLight</FontFamily>
+        <FontFamily x:Key="OnestLight">pack://application:,,,/Fonts/#Onest Light</FontFamily>
+        <FontFamily x:Key="OnestMedium">pack://application:,,,/Fonts/#Onest Medium</FontFamily>
+        <FontFamily x:Key="OnestRegular">pack://application:,,,/Fonts/#Onest Regular</FontFamily>
+        <FontFamily x:Key="OnestSemiBold">pack://application:,,,/Fonts/#Onest SemiBold</FontFamily>
+        <FontFamily x:Key="OnestThin">pack://application:,,,/Fonts/#Onest Thin</FontFamily>
+        <FontFamily x:Key="OnestFont">pack://application:,,,/Fonts/#Onest Variable</FontFamily>
     </Application.Resources>
 </Application>

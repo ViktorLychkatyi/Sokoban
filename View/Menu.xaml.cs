@@ -32,7 +32,7 @@ namespace Sokoban.View
 
         private void Exit(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
     }
 }
