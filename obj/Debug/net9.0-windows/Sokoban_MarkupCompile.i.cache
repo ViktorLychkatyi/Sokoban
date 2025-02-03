@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
 D:\Desktop\Sokoban\App.xaml
-5-314119845
+5-1313517990
 
-17-1773741038
+16-250026809
 2091761080925
-View\Game.xaml;View\LevelCompleted.xaml;View\MainWindow.xaml;View\Menu.xaml;View\Pause.xaml;
+View\Game.xaml;View\LevelCompleted.xaml;View\MainWindow.xaml;View\Menu.xaml;View\SelectLevel.xaml;
 
 False
 

@@ -16,7 +16,7 @@
     <Compile Update="View\Menu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\Pause.xaml.cs">
+    <Compile Update="View\SelectLevel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -33,7 +33,7 @@
     <Page Update="View\Menu.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\Pause.xaml">
+    <Page Update="View\SelectLevel.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

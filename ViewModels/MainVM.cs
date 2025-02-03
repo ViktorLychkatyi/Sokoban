@@ -173,7 +173,7 @@ namespace Sokoban.ViewModels
                 else
                 {
                     next_cell.Cell = Cell.None;
-                }   
+                }
             }
 
             if (AllCells[row_player][column_player].Cell == Cell.PlayerOnGoal)
@@ -196,6 +196,28 @@ namespace Sokoban.ViewModels
             {
                 next_cell.Cell = Cell.Player;
             }
+
+            CheckWin();
+        }
+
+        private void CheckWin()
+        {
+            foreach (var row in AllCells)
+            {
+                foreach (var cell in row)
+                {
+                    if (cell.Cell == Cell.Goal)
+                    {
+                        return;
+                    }
+                }
+            }
+            WinMessage();
+        }
+
+        private void WinMessage()
+        {
+            System.Windows.MessageBox.Show("Поздравляем! Вы выиграли!");
         }
 
         private void PlaceBoxsGoals(int count)

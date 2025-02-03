@@ -10,69 +10,164 @@
       KeyDown="Page_KeyDown"
       Focusable="True"
       Loaded="Page_Loaded">
+    <Page.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFA7C0"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#B115B4"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FF95B3"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#B115B4"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FF95B3"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#B115B4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FF95B3"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#B115B4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF95B3"/>
+        <Style x:Key="ButtonDesign" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" CornerRadius="50,50,50,50" Width="36" Height="36">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid Background="#F1ED72">
-        <ItemsControl 
-            ItemsSource="{Binding AllCells}"
-            Grid.Row="0"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <ItemsControl ItemsSource="{Binding}">
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel IsItemsHost="True"
-                                            Orientation="Horizontal"/>
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Border Width="50" Height="50" Margin="0" BorderBrush="#B115B4" BorderThickness="1">
-                                    <Grid>
-                                        <Grid.Style>
-                                            <Style TargetType="Grid">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Cell}" Value="Wall">
-                                                        <Setter Property="Background" Value="#FFA7C0"/>
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Cell}" Value="Player">
-                                                        <Setter Property="Background" Value="#F47274"/>
-                                                        <Setter Property="Clip">
-                                                            <Setter.Value>
-                                                                <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
-                                                            </Setter.Value>
-                                                        </Setter>
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Cell}" Value="Box">
-                                                        <Setter Property="Background" Value="#AD92EC"/>
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Cell}" Value="Goal">
-                                                        <Setter Property="Background" Value="#76F0A8"/>
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Cell}" Value="PlayerOnGoal">
-                                                        <Setter Property="Background" Value="#F47274"/>
-                                                        <Setter Property="Clip">
-                                                            <Setter.Value>
-                                                                <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
-                                                            </Setter.Value>
-                                                        </Setter>
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Cell}" Value="BoxOnGoal">
-                                                        <Setter Property="Background" Value="#AD92EC"/>
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Cell}" Value="None">
-                                                        <Setter Property="Background" Value="Transparent"/>
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </Grid.Style>
-                                    </Grid>
-                                </Border>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#FFB115B4" BorderThickness="1" Background="#FFA7C0" Height="50" Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Horizontal" Grid.Column="0">
+                    <Button Content="ᐸ" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" Click="Button_Click_2" FontFamily="GothicE" FontSize="18" Foreground="#FFB115B4"/>
+                    <Button Content="ᐳ" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" Foreground="#FFB115B4" FontFamily="GothicE" FontSize="18"/>
+                    <Label FontFamily="{StaticResource OnestMedium}" Content="LEVEL 1" FontSize="20" Margin="5,0,0,0"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       Grid.Column="1" Foreground="#FFB115B4"/>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Grid.Column="2">
+                    <Label FontFamily="{StaticResource OnestMedium}" Content="TIME: 00:00:00" FontSize="20" Margin="5,0,0,0"
+                    HorizontalAlignment="Left" VerticalAlignment="Center"
+                    Grid.Column="1" Foreground="#FFB115B4"/>
+
+                    <Label FontFamily="{StaticResource OnestMedium}" Content="MOVE: 0" FontSize="20" Margin="5,0,5,0"
+                    HorizontalAlignment="Left" VerticalAlignment="Center" 
+                    Grid.Column="1" Foreground="#FFB115B4"/>
+                    <Button Content="🠔" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" FontSize="24" Click="Button_Click_2" Foreground="#FFB115B4" HorizontalAlignment="Center" FontFamily="GothicG"/>
+                    <Button Content="⟳" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" FontSize="24" FontFamily="Onest Medium" Foreground="#FFB115B4"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="1">
+            <UniformGrid Rows="{Binding RowCount}" Columns="{Binding ColumnCount}">
+                <ItemsControl 
+                    ItemsSource="{Binding AllCells}"
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <ItemsControl ItemsSource="{Binding}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel IsItemsHost="True"
+                                                    Orientation="Horizontal"/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Width="50" Height="50" Margin="0" BorderBrush="#B115B4" BorderThickness="1">
+                                            <Grid>
+                                                <Grid.Style>
+                                                    <Style TargetType="Grid">
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding Cell}" Value="Wall">
+                                                                <Setter Property="Background" Value="#FFA7C0"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Cell}" Value="Player">
+                                                                <Setter Property="Background" Value="#F47274"/>
+                                                                <Setter Property="Clip">
+                                                                    <Setter.Value>
+                                                                        <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
+                                                                    </Setter.Value>
+                                                                </Setter>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Cell}" Value="Box">
+                                                                <Setter Property="Background" Value="#AD92EC"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Cell}" Value="Goal">
+                                                                <Setter Property="Background" Value="#76F0A8"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Cell}" Value="PlayerOnGoal">
+                                                                <Setter Property="Background" Value="#F47274"/>
+                                                                <Setter Property="Clip">
+                                                                    <Setter.Value>
+                                                                        <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25"/>
+                                                                    </Setter.Value>
+                                                                </Setter>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Cell}" Value="BoxOnGoal">
+                                                                <Setter Property="Background" Value="#AD92EC"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Cell}" Value="None">
+                                                                <Setter Property="Background" Value="Transparent"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Grid.Style>
+                                            </Grid>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </UniformGrid>
+        </Grid>
     </Grid>
 </Page>

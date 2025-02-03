@@ -14,7 +14,6 @@ D:\Desktop\Sokoban\obj\Debug\net9.0-windows\View\Game.g.cs
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\View\LevelCompleted.g.cs
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\View\MainWindow.g.cs
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\View\Menu.g.cs
-D:\Desktop\Sokoban\obj\Debug\net9.0-windows\View\Pause.g.cs
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\App.g.cs
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\Sokoban_MarkupCompile.cache
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\Sokoban_MarkupCompile.lref
@@ -22,7 +21,6 @@ D:\Desktop\Sokoban\obj\Debug\net9.0-windows\View\Game.baml
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\View\LevelCompleted.baml
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\View\MainWindow.baml
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\View\Menu.baml
-D:\Desktop\Sokoban\obj\Debug\net9.0-windows\View\Pause.baml
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\Sokoban.g.resources
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\Sokoban.GeneratedMSBuildEditorConfig.editorconfig
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\Sokoban.AssemblyInfoInputs.cache
@@ -38,3 +36,5 @@ D:\Desktop\Sokoban\obj\Debug\net9.0-windows\ref\Sokoban.dll
 D:\Desktop\Sokoban\bin\Debug\net9.0-windows\MaterialDesignColors.dll
 D:\Desktop\Sokoban\bin\Debug\net9.0-windows\MaterialDesignThemes.Wpf.dll
 D:\Desktop\Sokoban\obj\Debug\net9.0-windows\App.baml
+D:\Desktop\Sokoban\obj\Debug\net9.0-windows\View\SelectLevel.g.cs
+D:\Desktop\Sokoban\obj\Debug\net9.0-windows\View\SelectLevel.baml

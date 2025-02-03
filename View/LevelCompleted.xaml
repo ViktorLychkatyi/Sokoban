@@ -5,13 +5,79 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Sokoban.View"
       mc:Ignorable="d" 
-      d:DesignHeight="1024" d:DesignWidth="1280"
+      d:DesignHeight="768" d:DesignWidth="1280"
       Title="LevelCompleted">
-
-    <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="505,314,0,0" TextWrapping="Wrap" Text="LEVEL" VerticalAlignment="Top" FontSize="72" FontWeight="Bold" FontFamily="Onest Black"/>
-        <TextBlock HorizontalAlignment="Left" Margin="393,410,0,0" TextWrapping="Wrap" Text="COMPLETED" VerticalAlignment="Top" FontSize="72" FontWeight="Bold"/>
-        <Button Content="Play Again" HorizontalAlignment="Left" Margin="388,572,0,0" VerticalAlignment="Top" Height="86" Width="218" Click="Button_Click" FontSize="36" FontWeight="Bold"/>
-        <Button Content="Main" HorizontalAlignment="Left" Margin="636,572,0,0" VerticalAlignment="Top" Height="86" Width="218" Click="Button_Click" FontSize="36" FontWeight="Bold"/>
+    <Page.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#B115B4"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FF95B3"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#B115B4"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FF95B3"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#B115B4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FF95B3"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#B115B4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF95B3"/>
+        <Style x:Key="ButtonDesign" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="FontFamily" Value="{StaticResource OnestMedium}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="50" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid Background="#F1ED72">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" UseLayoutRounding="False">
+            <TextBlock FontFamily="{StaticResource OnestExtraBold}" Text="LEVEL COMPLETED!" HorizontalAlignment="Center" FontSize="110" 
+                Foreground="#FFB115B4" Height="178" FontWeight="Bold"/>
+            <Button Style="{DynamicResource ButtonDesign}" Content="NEXT" Height="86" Width="362" Margin="0, 0, 0, 30" Click="Next" FontSize="36" 
+                FontWeight="Bold" 
+                Foreground="#FFB115B4" Background="#FFFFA7C0" Cursor="Hand"/>
+            <Button Style="{DynamicResource ButtonDesign}" Content="SELECT LEVEL" Height="86" Width="362" Margin="0, 0, 0, 30" Click="SelectLevel" FontSize="36" 
+                FontWeight="Bold" 
+                Foreground="#FFB115B4" Background="#FFFFA7C0" Cursor="Hand"/>
+            <Button Style="{DynamicResource ButtonDesign}" Content="RESTART" Height="86" Width="362" Margin="0, 0, 0, 30" Click="Restart" FontSize="36" 
+                FontWeight="Bold" 
+                Foreground="#FFB115B4" Background="#FFFFA7C0" Cursor="Hand"/>
+        </StackPanel>
     </Grid>
 </Page>

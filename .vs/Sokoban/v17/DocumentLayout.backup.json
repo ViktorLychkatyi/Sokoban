@@ -7,60 +7,64 @@
       "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:viewmodels\\mainvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\viewmodels\\cellvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:viewmodels\\cellvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\game.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\game.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\game.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\game.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\game.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\game.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\pause.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\pause.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\sokoban.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:sokoban.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\levelcompleted.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\levelcompleted.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\models\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:models\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\models\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:models\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\menu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\selectlevel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\selectlevel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\levelcompleted.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\levelcompleted.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\models\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:models\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\secondwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\secondwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\viewmodels\\cellvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:viewmodels\\cellvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\levelcompleted.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\levelcompleted.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\menu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -73,14 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desktop\\Sokoban\\obj\\Debug\\net9.0-windows\\App.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net9.0-windows\\App.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\pause.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\pause.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|d:\\desktop\\sokoban\\view\\levelcompleted.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC152DD4-15C4-4711-AFD3-F6C4E03505E7}|Sokoban.csproj|solutionrelative:view\\levelcompleted.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 188,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -101,29 +97,20 @@
               "ToolTip": "D:\\Desktop\\Sokoban\\View\\Game.xaml",
               "RelativeToolTip": "View\\Game.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-29T20:09:18.272Z"
+              "WhenOpened": "2025-01-29T20:09:18.272Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\MainWindow.xaml",
               "RelativeDocumentMoniker": "View\\MainWindow.xaml",
               "ToolTip": "D:\\Desktop\\Sokoban\\View\\MainWindow.xaml",
               "RelativeToolTip": "View\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-29T20:08:48.062Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Menu.xaml",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\Menu.xaml",
-              "RelativeDocumentMoniker": "View\\Menu.xaml",
-              "ToolTip": "D:\\Desktop\\Sokoban\\View\\Menu.xaml",
-              "RelativeToolTip": "View\\Menu.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-29T20:12:35.255Z"
+              "WhenOpened": "2025-01-29T20:08:48.062Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -131,169 +118,16 @@
               "Title": "MainVM.cs",
               "DocumentMoniker": "D:\\Desktop\\Sokoban\\ViewModels\\MainVM.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainVM.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\ViewModels\\MainVM.cs",
-              "RelativeToolTip": "ViewModels\\MainVM.cs",
-              "ViewState": "AgIAAN8AAAAAAAAAAADgvxQAAAA8AAAAAAAAAA==",
+              "ToolTip": "D:\\Desktop\\Sokoban\\ViewModels\\MainVM.cs*",
+              "RelativeToolTip": "ViewModels\\MainVM.cs*",
+              "ViewState": "AgIAAPYAAAAAAAAAAAAzwNoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T15:31:52.217Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CellVM.cs",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\ViewModels\\CellVM.cs",
-              "RelativeDocumentMoniker": "ViewModels\\CellVM.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\ViewModels\\CellVM.cs",
-              "RelativeToolTip": "ViewModels\\CellVM.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T11:39:54.248Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Pause.xaml",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\Pause.xaml",
-              "RelativeDocumentMoniker": "View\\Pause.xaml",
-              "ToolTip": "D:\\Desktop\\Sokoban\\View\\Pause.xaml",
-              "RelativeToolTip": "View\\Pause.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-30T20:18:18.132Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "App.xaml",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "D:\\Desktop\\Sokoban\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-01T20:33:37.392Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Game.xaml.cs",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\Game.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Game.xaml.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\View\\Game.xaml.cs",
-              "RelativeToolTip": "View\\Game.xaml.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAA9wC8AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T20:12:56.07Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LevelCompleted.xaml",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\LevelCompleted.xaml",
-              "RelativeDocumentMoniker": "View\\LevelCompleted.xaml",
-              "ToolTip": "D:\\Desktop\\Sokoban\\View\\LevelCompleted.xaml",
-              "RelativeToolTip": "View\\LevelCompleted.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-29T20:25:54.816Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Player.cs",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\Models\\Player.cs",
-              "RelativeDocumentMoniker": "Models\\Player.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\Models\\Player.cs",
-              "RelativeToolTip": "Models\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T11:34:24.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Panel.cs",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\Models\\Panel.cs",
-              "RelativeDocumentMoniker": "Models\\Panel.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\Models\\Panel.cs",
-              "RelativeToolTip": "Models\\Panel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T15:54:36.095Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Menu.xaml.cs",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\Menu.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Menu.xaml.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\View\\Menu.xaml.cs",
-              "RelativeToolTip": "View\\Menu.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwCMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T20:36:59.144Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Level.cs",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\Models\\Level.cs",
-              "RelativeDocumentMoniker": "Models\\Level.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\Models\\Level.cs",
-              "RelativeToolTip": "Models\\Level.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T15:54:20.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "AssemblyInfo.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\AssemblyInfo.cs",
-              "RelativeToolTip": "AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T14:05:41.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LevelCompleted.xaml.cs",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\LevelCompleted.xaml.cs",
-              "RelativeDocumentMoniker": "View\\LevelCompleted.xaml.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\View\\LevelCompleted.xaml.cs",
-              "RelativeToolTip": "View\\LevelCompleted.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T09:55:21.419Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "App.g.cs",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\obj\\Debug\\net9.0-windows\\App.g.cs",
-              "RelativeDocumentMoniker": "obj\\Debug\\net9.0-windows\\App.g.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\obj\\Debug\\net9.0-windows\\App.g.cs",
-              "RelativeToolTip": "obj\\Debug\\net9.0-windows\\App.g.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAawDMAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T09:33:35.747Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T11:02:54.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "Cell.cs",
               "DocumentMoniker": "D:\\Desktop\\Sokoban\\Models\\Cell.cs",
               "RelativeDocumentMoniker": "Models\\Cell.cs",
@@ -301,31 +135,199 @@
               "RelativeToolTip": "Models\\Cell.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T15:18:56.655Z"
+              "WhenOpened": "2025-01-29T15:18:56.655Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Pause.xaml.cs",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\Pause.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Pause.xaml.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\View\\Pause.xaml.cs",
-              "RelativeToolTip": "View\\Pause.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAcwBsAAAA7AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Sokoban.csproj",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\Sokoban.csproj",
+              "RelativeDocumentMoniker": "Sokoban.csproj",
+              "ToolTip": "D:\\Desktop\\Sokoban\\Sokoban.csproj",
+              "RelativeToolTip": "Sokoban.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-03T11:47:21.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Panel.cs",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\Models\\Panel.cs",
+              "RelativeDocumentMoniker": "Models\\Panel.cs",
+              "ToolTip": "D:\\Desktop\\Sokoban\\Models\\Panel.cs",
+              "RelativeToolTip": "Models\\Panel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T20:08:41.341Z"
+              "WhenOpened": "2025-01-30T15:54:36.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SelectLevel.xaml",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\SelectLevel.xaml",
+              "RelativeDocumentMoniker": "View\\SelectLevel.xaml",
+              "ToolTip": "D:\\Desktop\\Sokoban\\View\\SelectLevel.xaml",
+              "RelativeToolTip": "View\\SelectLevel.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-03T11:18:04.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Game.xaml.cs",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\Game.xaml.cs",
+              "RelativeDocumentMoniker": "View\\Game.xaml.cs",
+              "ToolTip": "D:\\Desktop\\Sokoban\\View\\Game.xaml.cs",
+              "RelativeToolTip": "View\\Game.xaml.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T20:12:56.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Menu.xaml",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\Menu.xaml",
+              "RelativeDocumentMoniker": "View\\Menu.xaml",
+              "ToolTip": "D:\\Desktop\\Sokoban\\View\\Menu.xaml",
+              "RelativeToolTip": "View\\Menu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-29T20:12:35.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LevelCompleted.xaml",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\LevelCompleted.xaml",
+              "RelativeDocumentMoniker": "View\\LevelCompleted.xaml",
+              "ToolTip": "D:\\Desktop\\Sokoban\\View\\LevelCompleted.xaml",
+              "RelativeToolTip": "View\\LevelCompleted.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-29T20:25:54.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CellVM.cs",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\ViewModels\\CellVM.cs",
+              "RelativeDocumentMoniker": "ViewModels\\CellVM.cs",
+              "ToolTip": "D:\\Desktop\\Sokoban\\ViewModels\\CellVM.cs",
+              "RelativeToolTip": "ViewModels\\CellVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T11:39:54.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Level.cs",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\Models\\Level.cs",
+              "RelativeDocumentMoniker": "Models\\Level.cs",
+              "ToolTip": "D:\\Desktop\\Sokoban\\Models\\Level.cs",
+              "RelativeToolTip": "Models\\Level.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T15:54:20.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LevelCompleted.xaml.cs",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\LevelCompleted.xaml.cs",
+              "RelativeDocumentMoniker": "View\\LevelCompleted.xaml.cs",
+              "ToolTip": "D:\\Desktop\\Sokoban\\View\\LevelCompleted.xaml.cs",
+              "RelativeToolTip": "View\\LevelCompleted.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAIBJwCgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T09:55:21.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Menu.xaml.cs",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\Menu.xaml.cs",
+              "RelativeDocumentMoniker": "View\\Menu.xaml.cs",
+              "ToolTip": "D:\\Desktop\\Sokoban\\View\\Menu.xaml.cs",
+              "RelativeToolTip": "View\\Menu.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAuwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T20:36:59.144Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "SecondWindow.cs",
-              "DocumentMoniker": "D:\\Desktop\\Sokoban\\View\\SecondWindow.cs",
-              "RelativeDocumentMoniker": "View\\SecondWindow.cs",
-              "ToolTip": "D:\\Desktop\\Sokoban\\View\\SecondWindow.cs",
-              "RelativeToolTip": "View\\SecondWindow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "D:\\Desktop\\Sokoban\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-01T20:33:37.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\Models\\Player.cs",
+              "RelativeDocumentMoniker": "Models\\Player.cs",
+              "ToolTip": "D:\\Desktop\\Sokoban\\Models\\Player.cs",
+              "RelativeToolTip": "Models\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T20:07:34.057Z"
+              "WhenOpened": "2025-01-31T11:34:24.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "AssemblyInfo.cs",
+              "ToolTip": "D:\\Desktop\\Sokoban\\AssemblyInfo.cs",
+              "RelativeToolTip": "AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T14:05:41.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "App.g.cs",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\obj\\Debug\\net9.0-windows\\App.g.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net9.0-windows\\App.g.cs",
+              "ToolTip": "D:\\Desktop\\Sokoban\\obj\\Debug\\net9.0-windows\\App.g.cs",
+              "RelativeToolTip": "obj\\Debug\\net9.0-windows\\App.g.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAawDMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T09:33:35.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\Desktop\\Sokoban\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "D:\\Desktop\\Sokoban\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T11:02:54.625Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -27,9 +27,19 @@ namespace Sokoban.View
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Next(object sender, RoutedEventArgs e)
         {
+            Application.Current.Shutdown();
+        }
 
+        private void SelectLevel(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Restart(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
