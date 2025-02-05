@@ -79,26 +79,18 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-
                 <StackPanel Orientation="Horizontal" Grid.Column="0">
-                    <Button Content="ᐸ" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" Click="Button_Click_2" FontFamily="GothicE" FontSize="18" Foreground="#FFB115B4"/>
-                    <Button Content="ᐳ" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" Foreground="#FFB115B4" FontFamily="GothicE" FontSize="18"/>
+                    <Button Content="ᐸ" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" Click="UndoClick" FontFamily="GothicE" FontSize="18" Foreground="#FFB115B4"/>
+                    <Button Content="ᐳ" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" Click="RedoClick" Foreground="#FFB115B4" FontFamily="GothicE" FontSize="18"/>
                     <Label FontFamily="{StaticResource OnestMedium}" Content="LEVEL 1" FontSize="20" Margin="5,0,0,0"
                        HorizontalAlignment="Center" VerticalAlignment="Center" 
                        Grid.Column="1" Foreground="#FFB115B4"/>
                 </StackPanel>
-
-
                 <StackPanel Orientation="Horizontal" Grid.Column="2">
-                    <Label FontFamily="{StaticResource OnestMedium}" Content="TIME: 00:00:00" FontSize="20" Margin="5,0,0,0"
-                    HorizontalAlignment="Left" VerticalAlignment="Center"
-                    Grid.Column="1" Foreground="#FFB115B4"/>
-
-                    <Label FontFamily="{StaticResource OnestMedium}" Content="MOVE: 0" FontSize="20" Margin="5,0,5,0"
-                    HorizontalAlignment="Left" VerticalAlignment="Center" 
-                    Grid.Column="1" Foreground="#FFB115B4"/>
-                    <Button Content="🠔" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" FontSize="24" Click="Button_Click_2" Foreground="#FFB115B4" HorizontalAlignment="Center" FontFamily="GothicG"/>
-                    <Button Content="⟳" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" FontSize="24" FontFamily="Onest Medium" Foreground="#FFB115B4"/>
+                    <Label x:Name="TimerLabel" FontFamily="{StaticResource OnestMedium}" Content="TIME: 00:00:00" FontSize="20" Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Foreground="#FFB115B4"/>
+                    <Label x:Name="MoveLabel" FontFamily="{StaticResource OnestMedium}" Content="{Binding MoveCount, StringFormat='MOVE: {0}'}" Margin="0,0,5,0" FontSize="20" Foreground="#FFB115B4" VerticalAlignment="Center"/>
+                    <Button Content="🠔" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" FontSize="24" Click="SelectLevel" Foreground="#FFB115B4" HorizontalAlignment="Center" FontFamily="GothicG"/>
+                    <Button Content="⟳" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" FontSize="24" Click="Restart" FontFamily="Onest Medium" Foreground="#FFB115B4"/>
                 </StackPanel>
             </Grid>
         </Border>
@@ -151,7 +143,7 @@
                                                                 </Setter>
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding Cell}" Value="BoxOnGoal">
-                                                                <Setter Property="Background" Value="#AD92EC"/>
+                                                                <Setter Property="Background" Value="#F47274"/>
                                                             </DataTrigger>
                                                             <DataTrigger Binding="{Binding Cell}" Value="None">
                                                                 <Setter Property="Background" Value="Transparent"/>

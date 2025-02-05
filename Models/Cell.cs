@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sokoban.Models
 {
+    // за что отвечаект клетка
     enum Cell
     {
         None, Wall, Box, Goal, Player, PlayerOnGoal, BoxOnGoal

@@ -7,8 +7,9 @@
         materialDesign:ColorZoneAssist.Mode="PrimaryDark"
         xmlns:local="clr-namespace:Sokoban.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="768" Width="1280">
+        Title="Sokoban" Height="768" Width="1280"
+        Icon="pack://application:,,,/Sokoban;component/Icon/Sokoban.ico">
     <Grid>
-        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFF1ED72"/>
     </Grid>
 </Window>

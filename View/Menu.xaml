@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Sokoban.Models"
       mc:Ignorable="d" 
       d:DesignHeight="768" d:DesignWidth="1280"
-      Title="Menu" Cursor="Hand">
+      Title="Menu">
     <Page.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">

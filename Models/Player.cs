@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sokoban.Models
 {
+    // движение персонажа
     enum Player
     {
         Left, Right, Up, Down, W, A, S, D

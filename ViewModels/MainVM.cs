@@ -7,16 +7,26 @@ using Sokoban.Models;
 using Prism.Mvvm;
 using Prism.Commands;
 using System.Windows.Input;
+using System.ComponentModel;
+using System.Diagnostics;
 
-namespace Sokoban.ViewModels
+namespace Sokoban.view_models
 {
+    // игровая доска для взаймодействия с вью игрой
     class MainVM : BindableBase
     {
         private int column_count = 25;
         private int row_count = 10;
         private int row_player;
         private int column_player;
+        private int move_count = 0;
         private Random random = new Random(28);
+
+        // проверка для отмены и вернуть действия
+        private Stack<(int, int, Cell[][])> undo_stack = new Stack<(int, int, Cell[][])>();
+        private Stack<(int, int, Cell[][])> redo_stack = new Stack<(int, int, Cell[][])>();
+
+        // список клеток и команды для движения
         public List<List<CellVM>> AllCells { get; } = new List<List<CellVM>>();
         public DelegateCommand<Player?> MoveCommand { get; }
 
@@ -26,8 +36,10 @@ namespace Sokoban.ViewModels
             InitializeCells();
             PlacePlayer();
             PlaceBoxsGoals(4);
+            MoveCount = 0;
         }
 
+        // инициализация клеток
         private void InitializeCells()
         {
             for (int row = 0; row < row_count; row++)
@@ -68,6 +80,7 @@ namespace Sokoban.ViewModels
             }
         }
 
+        // размещение коробок
         private bool CheckBoxPlace(int row, int column)
         {
             int[] row_box = { -1, 1, 0, 0 };
@@ -78,7 +91,7 @@ namespace Sokoban.ViewModels
                 int new_row_box = row + row_box[i];
                 int new_column_box = column + column_box[i];
 
-                if (new_row_box >= 0 && new_row_box < row_count && new_row_box >= 0 && new_row_box < column_count)
+                if (new_row_box >= 0 && new_row_box < row_count && new_column_box >= 0 && new_column_box < column_count)
                 {
                     if (AllCells[new_row_box][new_column_box].Cell == Cell.Box)
                     {
@@ -86,10 +99,25 @@ namespace Sokoban.ViewModels
                     }
                 }
             }
-
             return true;
         }
 
+        // копирование клеток
+        private Cell[][] CopyCells()
+        {
+            var cellsCopy = new Cell[row_count][];
+            for (int row = 0; row < row_count; row++)
+            {
+                cellsCopy[row] = new Cell[column_count];
+                for (int column = 0; column < column_count; column++)
+                {
+                    cellsCopy[row][column] = AllCells[row][column].Cell;
+                }
+            }
+            return cellsCopy;
+        }
+
+        // размещение игрока
         private void PlacePlayer()
         {
             while (true)
@@ -107,119 +135,173 @@ namespace Sokoban.ViewModels
             }
         }
 
+        // количество ходов
+        public int MoveCount
+        {
+            get
+            {
+                return move_count;
+            }
+            set
+            {
+                if (move_count != value)
+                {
+                    move_count = value;
+                    OnPropertyChanged(new PropertyChangedEventArgs(nameof(MoveCount)));
+                }
+            }
+        }
+
+        // обновление состояния игрового поля
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        // движение игрока
         private void Move(Player? direction)
         {
             if (direction == null) return;
 
+            undo_stack.Push((row_player, column_player, CopyCells()));
+            redo_stack.Clear();
+
+            bool moved = false;
             switch (direction)
             {
                 case Player.Up:
                 case Player.W:
-                    MovePlayer(-1, 0);
+                    moved = MovePlayer(-1, 0);
                     break;
                 case Player.Down:
                 case Player.S:
-                    MovePlayer(1, 0);
+                    moved = MovePlayer(1, 0);
                     break;
                 case Player.Left:
                 case Player.A:
-                    MovePlayer(0, -1);
+                    moved = MovePlayer(0, -1);
                     break;
                 case Player.Right:
                 case Player.D:
-                    MovePlayer(0, 1);
+                    moved = MovePlayer(0, 1);
                     break;
+            }
+            if (moved)
+            {
+                MoveCount++;
             }
         }
 
-        private void MovePlayer(int row_change, int column_change)
+        // система движении игрока
+        private bool MovePlayer(int row_change, int column_change)
         {
             int new_row_player = row_player + row_change;
             int new_column_player = column_player + column_change;
 
-            if (new_row_player < 0 || new_row_player >= row_count || new_column_player < 0 || new_column_player >= column_count)
-                return;
+            if (new_row_player < 0 || new_row_player >= row_count ||
+                new_column_player < 0 || new_column_player >= column_count)
+                return false;
 
             var next_cell = AllCells[new_row_player][new_column_player];
 
             if (next_cell.Cell == Cell.Wall)
-                return;
+                return false;
 
             if (next_cell.Cell == Cell.Box || next_cell.Cell == Cell.BoxOnGoal)
             {
                 int next_row_box = new_row_player + row_change;
                 int next_column_box = new_column_player + column_change;
 
-                if (next_row_box < 0 || next_row_box >= row_count || next_column_box < 0 || next_column_box >= column_count)
-                    return;
+                if (next_row_box < 0 || next_row_box >= row_count ||
+                    next_column_box < 0 || next_column_box >= column_count)
+                    return false;
 
                 var next_cell_box = AllCells[next_row_box][next_column_box];
                 if (next_cell_box.Cell != Cell.None && next_cell_box.Cell != Cell.Goal)
-                    return;
+                    return false;
 
-                if (next_cell_box.Cell == Cell.Goal)
-                {
-                    next_cell_box.Cell = Cell.BoxOnGoal;
-                }
-                else
-                {
-                    next_cell_box.Cell = Cell.Box;
-                }
-
-                if (next_cell.Cell == Cell.BoxOnGoal || next_cell.Cell == Cell.PlayerOnGoal)
-                {
-                    next_cell.Cell = Cell.Goal;
-                }
-                else
-                {
-                    next_cell.Cell = Cell.None;
-                }
+                next_cell_box.Cell = (next_cell_box.Cell == Cell.Goal) ? Cell.BoxOnGoal : Cell.Box;
+                next_cell.Cell = (next_cell.Cell == Cell.BoxOnGoal) ? Cell.Goal : Cell.None;
             }
 
-            if (AllCells[row_player][column_player].Cell == Cell.PlayerOnGoal)
-            {
-                AllCells[row_player][column_player].Cell = Cell.Goal;
-            }
-            else
-            {
-                AllCells[row_player][column_player].Cell = Cell.None;
-            }
+            AllCells[row_player][column_player].Cell = (AllCells[row_player][column_player].Cell == Cell.PlayerOnGoal) ? Cell.Goal : Cell.None;
 
             row_player = new_row_player;
             column_player = new_column_player;
+            next_cell.Cell = (next_cell.Cell == Cell.Goal) ? Cell.PlayerOnGoal : Cell.Player;
 
-            if (next_cell.Cell == Cell.Goal)
-            {
-                next_cell.Cell = Cell.PlayerOnGoal;
-            }
-            else
-            {
-                next_cell.Cell = Cell.Player;
-            }
-
+            MoveCount++;
             CheckWin();
+            return true;
         }
 
-        private void CheckWin()
+        // система действии отмены
+        public void Undo()
         {
-            foreach (var row in AllCells)
+            if (undo_stack.Count > 0)
             {
-                foreach (var cell in row)
+                redo_stack.Push((row_player, column_player, CopyCells()));
+
+                var (prev_row, prev_column, prev_cell) = undo_stack.Pop();
+                row_player = prev_row;
+                column_player = prev_column;
+
+                for (int row = 0; row < row_count; row++)
                 {
-                    if (cell.Cell == Cell.Goal)
+                    for (int column = 0; column < column_count; column++)
                     {
-                        return;
+                        AllCells[row][column].Cell = prev_cell[row][column];
                     }
                 }
+                MoveCount--;
             }
-            WinMessage();
         }
 
-        private void WinMessage()
+        // система действии возврата
+        public void Redo()
         {
-            System.Windows.MessageBox.Show("Поздравляем! Вы выиграли!");
+            if (redo_stack.Count > 0)
+            {
+                undo_stack.Push((row_player, column_player, CopyCells()));
+
+                var (next_row, next_col, next_board) = redo_stack.Pop();
+                row_player = next_row;
+                column_player = next_col;
+
+                for (int row = 0; row < row_count; row++)
+                {
+                    for (int column = 0; column < column_count; column++)
+                    {
+                        AllCells[row][column].Cell = next_board[row][column];
+                    }
+                }
+                MoveCount++;
+            }
+        }
+        public bool HasRedo()
+        {
+            return redo_stack.Count > 0;
         }
 
+        // событие победы
+        public event Action? GameWon;
+
+        // проверка на победу
+        private void CheckWin()
+        {
+            if (AllCells.SelectMany(row => row).All(cell => cell.Cell != Cell.Goal))
+            {
+                if (AllCells.SelectMany(row => row).Any(cell => cell.Cell == Cell.PlayerOnGoal))
+                {
+                    return;
+                }
+                GameWon?.Invoke();
+            }
+        }
+
+        // рандом размещение коробок и целей
         private void PlaceBoxsGoals(int count)
         {
             for (int i = 0; i < count; i++)
@@ -229,6 +311,7 @@ namespace Sokoban.ViewModels
             }
         }
 
+        // рандомное размещение
         private void PlaceRandom(Cell cell)
         {
             while (true)
@@ -244,6 +327,7 @@ namespace Sokoban.ViewModels
             }
         }
 
+        // проверка на размещение коробок
         private bool CheckPlaceBox(int row, int column)
         {
             int[] row_box = { -1, 1, 0, 0 };

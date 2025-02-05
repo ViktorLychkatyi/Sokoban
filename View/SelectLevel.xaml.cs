@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Sokoban.View
 {
-    /// <summary>
-    /// Логика взаимодействия для SelectLevel.xaml
-    /// </summary>
     public partial class SelectLevel : Page
     {
         public SelectLevel()

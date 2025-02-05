@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using Prism.Mvvm;
 using Sokoban.Models;
 
-namespace Sokoban.ViewModels
+namespace Sokoban.view_models
 {
+    // система клетки
     class CellVM : BindableBase
     {
         public int Row { get; }
         public int Column { get; }
-
         private Cell cell;
 
         public Cell Cell

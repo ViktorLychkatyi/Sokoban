@@ -1,8 +1,11 @@
 ﻿using Sokoban.Models;
-using Sokoban.ViewModels;
+using Sokoban.view_models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.JavaScript;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,20 +17,74 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Sokoban.View
 {
-    /// <summary>
-    /// Логика взаимодействия для Game.xaml
-    /// </summary>
+    // взаймодействия с игрой
     public partial class Game : Page
     {
+        private int move_count;
+        private DispatcherTimer dispatcher_timer;
+        private TimeSpan time_span;
+        private Stopwatch stopwatch = new Stopwatch();
+
         public Game()
         {
             InitializeComponent();
-            DataContext = new MainVM();
+            InitializeTimer();
+            var view_model = new MainVM();
+            view_model.GameWon += OnGameWon;
+            DataContext = view_model;
+            UpdateMoveLabel();
         }
 
+        // инициализация таймера
+        private void InitializeTimer()
+        {
+            time_span = TimeSpan.Zero;
+            dispatcher_timer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(1)
+            };
+
+            dispatcher_timer.Tick += Timer;
+            dispatcher_timer.Start();
+        }
+
+        private void Timer(object sender, EventArgs e)
+        {
+            time_span = time_span.Add(TimeSpan.FromSeconds(1));
+            UpdateTimerLabel();
+        }
+
+        // обновление данных текста на экране, таймер, количество ходов
+        private void UpdateTimerLabel()
+        {
+            TimerLabel.Content = $"TIME: {time_span:hh\\:mm\\:ss}";
+        }
+
+        private void UpdateMoveLabel()
+        {
+            MoveLabel.Content = $"MOVE: {move_count}";
+        }
+
+        // проверка на завершение игры, если коробки на конечных точках
+        private void ReturnNavigation()
+        {
+            NavigationService?.Navigate(new LevelCompleted());
+        }
+
+        private void OnGameWon()
+        {
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                SaveGameStats(time_span);
+                ReturnNavigation();
+            });
+        }
+
+        // взаймодейтсвие клавишами
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             this.Focus();
@@ -35,53 +92,77 @@ namespace Sokoban.View
 
         private void Page_KeyDown(object sender, KeyEventArgs e)
         {
-            var viewModel = DataContext as MainVM;
-            if (viewModel == null) return;
+            var view_model = DataContext as MainVM;
+            if (view_model == null) return;
+
+            move_count++;
+            UpdateMoveLabel();
 
             switch (e.Key)
             {
                 case Key.Up:
-                    viewModel.MoveCommand.Execute(Player.Up);
+                case Key.W:
+                    view_model.MoveCommand.Execute(Player.Up);
                     break;
                 case Key.Down:
-                    viewModel.MoveCommand.Execute(Player.Down);
+                case Key.S:
+                    view_model.MoveCommand.Execute(Player.Down);
                     break;
                 case Key.Left:
-                    viewModel.MoveCommand.Execute(Player.Left);
+                case Key.A:
+                    view_model.MoveCommand.Execute(Player.Left);
                     break;
                 case Key.Right:
-                    viewModel.MoveCommand.Execute(Player.Right);
-                    break;
-                case Key.W:
-                    viewModel.MoveCommand.Execute(Player.W);
-                    break;
-                case Key.S:
-                    viewModel.MoveCommand.Execute(Player.S);
-                    break;
-                case Key.A:
-                    viewModel.MoveCommand.Execute(Player.A);
-                    break;
                 case Key.D:
-                    viewModel.MoveCommand.Execute(Player.D);
+                    view_model.MoveCommand.Execute(Player.Right);
                     break;
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        // создание файла после прохождении уровня
+        private void SaveGameStats(TimeSpan timeTaken)
         {
+            string folder_path = @"C:\MyGameStats";
+            System.IO.Directory.CreateDirectory(folder_path);
 
+            string file_path = System.IO.Path.Combine(folder_path, "game_stats.txt");
+
+            using (var writer = new System.IO.StreamWriter(file_path))
+            {
+                writer.WriteLine($"Шаги: {move_count}");
+                writer.WriteLine($"Время: {timeTaken:hh\\:mm\\:ss}");
+            }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        // кнопки
+        private void UndoClick(object sender, RoutedEventArgs e)
         {
-                
+            if (DataContext is MainVM vm && move_count > 0)
+            {
+                vm.Undo();
+                move_count--;
+                UpdateMoveLabel();
+            }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void RedoClick(object sender, RoutedEventArgs e)
         {
-
+            if (DataContext is MainVM vm && vm.HasRedo())
+            {
+                vm.Redo();
+                move_count++;
+                UpdateMoveLabel();
+            }
         }
 
+        private void SelectLevel(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Menu());
+        }
 
+        private void Restart(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Game());
+        }
     }
 }

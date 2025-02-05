@@ -15,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace Sokoban.View
 {
-    /// <summary>
-    /// Логика взаимодействия для Menu.xaml
-    /// </summary>
+    // главное меню
     public partial class Menu : Page
     {
         public Menu()
@@ -25,6 +23,7 @@ namespace Sokoban.View
             InitializeComponent();
         }
 
+        // кнопки
         private void Start(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Game());

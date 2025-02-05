@@ -15,11 +15,6 @@ using System.Windows.Shapes;
 
 namespace Sokoban.View
 {
-    /// <summary>
-    /// Логика взаимодействия для LevelCompleted.xaml
-    /// </summary>
-    /// 
-
     public partial class LevelCompleted : Page
     {
         public LevelCompleted()
@@ -27,6 +22,7 @@ namespace Sokoban.View
             InitializeComponent();
         }
 
+        // кнопки
         private void Next(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -39,7 +35,7 @@ namespace Sokoban.View
 
         private void Restart(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            this.NavigationService.Navigate(new Game());
         }
     }
 }
