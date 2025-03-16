@@ -23,19 +23,15 @@ namespace Sokoban.View
         }
 
         // кнопки
-        private void Next(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void SelectLevel(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
 
         private void Restart(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Game());
+        }
+
+        private void ToMain(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Menu());
         }
     }
 }

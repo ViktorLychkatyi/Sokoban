@@ -105,16 +105,16 @@ namespace Sokoban.view_models
         // копирование клеток
         private Cell[][] CopyCells()
         {
-            var cellsCopy = new Cell[row_count][];
+            var cells_copy = new Cell[row_count][];
             for (int row = 0; row < row_count; row++)
             {
-                cellsCopy[row] = new Cell[column_count];
+                cells_copy[row] = new Cell[column_count];
                 for (int column = 0; column < column_count; column++)
                 {
-                    cellsCopy[row][column] = AllCells[row][column].Cell;
+                    cells_copy[row][column] = AllCells[row][column].Cell;
                 }
             }
-            return cellsCopy;
+            return cells_copy;
         }
 
         // размещение игрока
@@ -222,15 +222,15 @@ namespace Sokoban.view_models
                 if (next_cell_box.Cell != Cell.None && next_cell_box.Cell != Cell.Goal)
                     return false;
 
-                next_cell_box.Cell = (next_cell_box.Cell == Cell.Goal) ? Cell.BoxOnGoal : Cell.Box;
-                next_cell.Cell = (next_cell.Cell == Cell.BoxOnGoal) ? Cell.Goal : Cell.None;
+                next_cell_box.Cell = (next_cell_box.Cell == Cell.Goal)? Cell.BoxOnGoal: Cell.Box;
+                next_cell.Cell = (next_cell.Cell == Cell.BoxOnGoal)? Cell.Goal: Cell.None;
             }
 
-            AllCells[row_player][column_player].Cell = (AllCells[row_player][column_player].Cell == Cell.PlayerOnGoal) ? Cell.Goal : Cell.None;
+            AllCells[row_player][column_player].Cell = (AllCells[row_player][column_player].Cell == Cell.PlayerOnGoal)? Cell.Goal: Cell.None;
 
             row_player = new_row_player;
             column_player = new_column_player;
-            next_cell.Cell = (next_cell.Cell == Cell.Goal) ? Cell.PlayerOnGoal : Cell.Player;
+            next_cell.Cell = (next_cell.Cell == Cell.Goal)? Cell.PlayerOnGoal: Cell.Player;
 
             MoveCount++;
             CheckWin();

@@ -69,13 +69,10 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" UseLayoutRounding="False">
             <TextBlock FontFamily="{StaticResource OnestExtraBold}" Text="LEVEL COMPLETED!" HorizontalAlignment="Center" FontSize="110" 
                 Foreground="#FFB115B4" Height="178" FontWeight="Bold"/>
-            <Button Style="{DynamicResource ButtonDesign}" Content="NEXT" Height="86" Width="362" Margin="0, 0, 0, 30" Click="Next" FontSize="36" 
-                FontWeight="Bold" 
-                Foreground="#FFB115B4" Background="#FFFFA7C0" Cursor="Hand"/>
-            <Button Style="{DynamicResource ButtonDesign}" Content="SELECT LEVEL" Height="86" Width="362" Margin="0, 0, 0, 30" Click="SelectLevel" FontSize="36" 
-                FontWeight="Bold" 
-                Foreground="#FFB115B4" Background="#FFFFA7C0" Cursor="Hand"/>
             <Button Style="{DynamicResource ButtonDesign}" Content="RESTART" Height="86" Width="362" Margin="0, 0, 0, 30" Click="Restart" FontSize="36" 
+                FontWeight="Bold" 
+                Foreground="#FFB115B4" Background="#FFFFA7C0" Cursor="Hand"/>
+            <Button Style="{DynamicResource ButtonDesign}" Content="MAIN" Height="86" Width="362" Margin="0, 0, 0, 30" Click="ToMain" FontSize="36" 
                 FontWeight="Bold" 
                 Foreground="#FFB115B4" Background="#FFFFA7C0" Cursor="Hand"/>
         </StackPanel>

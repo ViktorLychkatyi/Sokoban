@@ -8,13 +8,13 @@ D:\Desktop\Sokoban\obj\Debug\net9.0-windows\
 Sokoban
 none
 false
-TRACE;DEBUG;NET;NET9_0;NETCOREAPP
+TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 D:\Desktop\Sokoban\App.xaml
-5-1313517990
-
-14187911112
-2091761080925
-View\Game.xaml;View\LevelCompleted.xaml;View\MainWindow.xaml;View\Menu.xaml;View\SelectLevel.xaml;
+4-274693606
+11341300090
+132067210691
+2081521016726
+View\Game.xaml;View\LevelCompleted.xaml;View\MainWindow.xaml;View\Menu.xaml;
 
 False
 

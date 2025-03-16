@@ -82,7 +82,7 @@
                 <StackPanel Orientation="Horizontal" Grid.Column="0">
                     <Button Content="ᐸ" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" Click="UndoClick" FontFamily="GothicE" FontSize="18" Foreground="#FFB115B4"/>
                     <Button Content="ᐳ" Style="{DynamicResource ButtonDesign}" Width="40" Height="40" Margin="5" Cursor="Hand" Click="RedoClick" Foreground="#FFB115B4" FontFamily="GothicE" FontSize="18"/>
-                    <Label FontFamily="{StaticResource OnestMedium}" Content="LEVEL 1" FontSize="20" Margin="5,0,0,0"
+                    <Label FontFamily="{StaticResource OnestMedium}" Content="SOKOBAN" FontSize="20" Margin="5,0,0,0"
                        HorizontalAlignment="Center" VerticalAlignment="Center" 
                        Grid.Column="1" Foreground="#FFB115B4"/>
                 </StackPanel>
